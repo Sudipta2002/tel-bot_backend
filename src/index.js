@@ -13,12 +13,12 @@ const connectDB = require('./config/dbConfig');
 const Messages = require('./models/messageModel');
 
 const app = express();
-const bot = new Telegraf("6009895764:AAEeNw9U--jLpJZyyogSEj1TcSdmS4e9nyI");
+const bot = new Telegraf("6790884283:AAEhKliCKEfIc1wqYGc4K9W8cGX6_szxiig");
 let websocketServer = null;
-bot.start((ctx) => ctx.reply("Welcome to sonagachi!"));
+bot.start((ctx) => ctx.reply("Welcome to BOT World!"));
 bot.help((ctx) => ctx.reply('Send me a sticker'));
 
-bot.on(message('sticker'), async(ctx) => await ctx.replyWithPhoto(Input.fromURL("https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.news18.com%2Fibnlive%2Fuploads%2F2023%2F04%2Fthis-moment-when-we-are-together.jpg&tbnid=AvVShbvYujlQkM&vet=12ahUKEwi76Nbi0bH_AhVmKrcAHcCyCVkQMygiegUIARDfAQ..i&imgrefurl=https%3A%2F%2Fwww.news18.com%2Flifestyle%2Fwhy-a-healthy-and-satisfying-sex-life-is-good-for-your-mental-health-7547197.html&docid=3VgejO6w6pbG8M&w=2048&h=1365&q=sex&ved=2ahUKEwi76Nbi0bH_AhVmKrcAHcCyCVkQMygiegUIARDfAQ")));
+bot.on(message('sticker'), async(ctx) => await ctx.replyWithPhoto(Input.fromURL("https://shorturl.at/ackK0")));
 bot.command('echo', ctx => {
     const message = ctx.message.text.split(' ');
     message.shift();
